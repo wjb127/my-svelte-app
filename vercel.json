@@ -1,12 +1,16 @@
 {
-  "framework": "svelte",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "outputDirectory": ".svelte-kit/output",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
+    "framework": "svelte",
+    "buildCommand": "npx svelte-kit sync && npm run build",
+    "devCommand": "npm run dev",
+    "outputDirectory": ".svelte-kit/output",
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ],
+    "env": {
+      "NODE_VERSION": "18.x"
     }
-  ]
-} 
+  }
+  
