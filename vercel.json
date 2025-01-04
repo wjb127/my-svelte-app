@@ -3,7 +3,11 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node@18"
+      "use": "@vercel/node"
     }
-  ]
+  ],
+  "framework": "svelte",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "outputDirectory": ".svelte-kit/output"
 } 
