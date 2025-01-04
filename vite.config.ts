@@ -7,7 +7,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // 글로벌 SCSS 파일을 포함할 경우
         additionalData: `@import './src/styles/global.scss';`
       }
     }
