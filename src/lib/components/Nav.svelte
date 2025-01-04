@@ -6,7 +6,11 @@
   <div class="nav-container">
     <a href="/" class="logo">로고</a>
     
-    <button class="menu-button" on:click={() => isMenuOpen = !isMenuOpen}>
+    <button 
+      class="menu-button" 
+      aria-label="메뉴 열기"
+      on:click={() => isMenuOpen = !isMenuOpen}
+    >
       <span class="menu-icon"></span>
     </button>
 

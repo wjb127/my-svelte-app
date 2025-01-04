@@ -14,7 +14,6 @@ const config = {
 		adapter: adapter({
 			runtime: 'nodejs18.x',
 			regions: ['iad1'],
-			edge: false,
 			split: false
 		}),
 		paths: {
