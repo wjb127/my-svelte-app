@@ -9,5 +9,11 @@
   "framework": "svelte",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "outputDirectory": ".svelte-kit/output"
+  "outputDirectory": ".svelte-kit/output",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
 } 

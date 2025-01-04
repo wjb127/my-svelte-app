@@ -13,8 +13,16 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
 			runtime: 'nodejs18.x',
-			regions: ['iad1']
-		})
+			regions: ['iad1'],
+			edge: false,
+			split: false
+		}),
+		paths: {
+			base: ''
+		},
+		prerender: {
+			handleMissingId: 'ignore'
+		}
 	}
 };
 
