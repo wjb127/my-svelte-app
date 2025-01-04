@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #2c3e50;
+  --text-color: #333;
+  --light-bg: #f5f5f5;
+}
+
+/* 기타 전역 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
