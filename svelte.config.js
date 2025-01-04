@@ -1,29 +1,17 @@
 import adapter from '@sveltejs/adapter-vercel';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { preprocessMeltUI } from '@melt-ui/pp';
+import sequence from 'svelte-sequential-preprocessor';
+import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			runtime: 'nodejs18.x'
-		}),
+		adapter: adapter(),
 		alias: {
 			$lib: './src/lib'
-		},
-		files: {
-			assets: 'static'
 		}
 	},
-	preprocess: vitePreprocess(),
-	vite: {
-		css: {
-			preprocessorOptions: {
-				scss: {
-					additionalData: ''
-				}
-			}
-		}
-	}
+	preprocess: sequence([preprocess(), preprocessMeltUI()])
 };
 
 export default config;
