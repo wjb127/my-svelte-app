@@ -9,6 +9,9 @@ const config = {
 		}),
 		alias: {
 			$lib: './src/lib'
+		},
+		files: {
+			assets: 'static'
 		}
 	},
 	preprocess: vitePreprocess(),
