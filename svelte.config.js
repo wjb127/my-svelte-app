@@ -6,12 +6,19 @@ import preprocess from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			runtime: 'edge'
+		}),
 		alias: {
 			$lib: './src/lib'
 		}
 	},
-	preprocess: sequence([preprocess(), preprocessMeltUI()])
+	preprocess: sequence([
+		preprocess({
+			postcss: true
+		}),
+		preprocessMeltUI()
+	])
 };
 
 export default config;
